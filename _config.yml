@@ -1,11 +1,11 @@
 # Site settings
 author: Jon Schacter
-title: 
+title: Jon Schacter
 header-img: img/home-bg.png
 email: schacter.jon@gmail.com
 copyright_name: Jon Schacter
 description: > # this means to ignore newlines until "baseurl:"
-  
+  A New Coders Journey
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  jonschacter
