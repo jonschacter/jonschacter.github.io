@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "My GameTracker Sinatra Project"
-date:       2020-04-03 23:32:48 +0000
+date:       2020-04-03 19:32:48 -0400
 permalink:  my_gametracker_sinatra_project
 ---
 
@@ -10,9 +10,9 @@ I was a little bit amibitious with this project and instead of doing a simple ga
 
 My initial relationship set-up:
 
-![](imgur.com/a/HNspdxN)
+![](https://i.imgur.com/bhfKiaw.jpg)
 
-I was using a join table to connect game_sessions and players with a many-to-many relationship. I was using a winner_id column inside of game_sessions that would hold a player_id and created custom winner= and winner methods to connect to a player object.
+I used a join table to connect game_sessions and players with a many-to-many relationship. I was using a winner_id column inside of game_sessions that would hold a player_id and created custom winner= and winner methods to connect to a player object.
 
 My main issue with this was because SQLite3 cannot store arrays of data I could only have one winner. I wanted to be able to track cooperative or team games so had to find a way around this. 
 
