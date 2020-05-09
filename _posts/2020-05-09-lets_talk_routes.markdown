@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Let's Talk Routes"
-date:       2020-05-09 22:27:30 +0000
+date:       2020-05-09 18:27:31 -0400
 permalink:  lets_talk_routes
 ---
 
