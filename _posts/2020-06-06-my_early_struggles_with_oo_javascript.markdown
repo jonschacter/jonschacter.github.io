@@ -12,7 +12,7 @@ I had a personal goal that I wanted this project to be OO, both for learning/und
 
 At the end of the day Friday, I had a nearly identical product. However I am much prouder of my code. I think it turned out much cleaner and am thrilled with the changes I made. I think using OO made my logic much clearer and my code less repetitive. It allowed clearer separation and organization. If I could go back in time and approach this project again I would take a little more time planning. I dove in quickly building upon function after function without taking the time to set up clear infrastructure and organization, and while the project might not have changed much it took a significant amount of additional work for myself to feel proud of it. 
 
-One specific ways OO was able to help was using class methods to store object instances in memory and cut down on the amount of fetch requests I'd have to make. Check the following code snippet:
+One specific way OO was able to help was using class methods to store, update, and delete object instances in memory and cut down on the amount of fetch requests I'd have to make. 
 
 ```
 class Team {
@@ -23,10 +23,14 @@ class Team {
 						this.name = name;
 						Team.all.push(this);
 			}
+			
+			get div(){
+			      return document.querySelectorAll(`*[team-id='${this.id}']`)[0]
+			}
 }
 ```
 
-With these simple methods I am able to create and store all of my team objects after one fetch request. I can change and re-render DOM elements using Team.all and not have send a second fetch request and create each object again, as long as I keep my Team.all array up-to-date. 
+By setting up a simple .all class method I am able to create and store all of my team objects after one fetch request. I can change and re-render DOM elements using Team.all and not have send a second fetch request and create each object again, as long as I keep my Team.all array up-to-date. I also used a custom getter function to abstract away the querySelectors when I was manipulating the DOM
 
 ```
 class API {
@@ -42,4 +46,6 @@ class API {
 }
 ```
 
-Here is my API.deleteTeam method where I show how after processing a DELETE request I removed the corresponding team from Team.all and used that to re-render the team list instead of doing a new GET request to re-render the teams. I was able to make my app a lot more efficient and flexible, while relying on less querySelectors and fetch requests.
+Here is my API.deleteTeam method where I show how after processing a DELETE request I removed the corresponding team from Team.all and used that to re-render the team list instead of doing a new GET request to re-render the teams. 
+
+With changes like these I was able to make my app a lot more efficient and flexible, while taking advantage of the computers memory and relying less on fetch requests and repetitive code.
