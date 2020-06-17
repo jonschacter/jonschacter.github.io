@@ -16,17 +16,17 @@ One specific way OO was able to help was using class methods to store, update, a
 
 ```
 class Team {
-      static all = []
-			
-			constructor({id, name}){
-			      this.id = id;
-						this.name = name;
-						Team.all.push(this);
-			}
-			
-			get div(){
-			      return document.querySelectorAll(`*[team-id='${this.id}']`)[0]
-			}
+	static all = []
+
+	constructor({id, name}){
+		this.id = id
+		this.name = name
+		Team.all.push(this)
+	}
+
+	get div(){
+		return document.querySelectorAll(`*[team-id='${this.id}']`)[0]
+	}
 }
 ```
 
@@ -34,15 +34,15 @@ By setting up a simple .all class method I am able to create and store all of my
 
 ```
 class API {
-      static deleteTeam(id){			
-			      fetch(url, options)
-						.then(resp => resp.json())
-						.then((data) => {
-						      const index = Team.all.findIndex((team) => team.id === data.id)
-									Team.all.splice(index, 1)
-									Team.renderTeams()
-						})
+	static deleteTeam(id){
+		fetch(url, options)
+			.then(resp => resp.json())
+			.then((data) => {
+				const index = Team.all.findIndex((team) => team.id === data.id)
+				Team.all.splice(index, 1)
+				Team.renderTeams()
 			}
+	}
 }
 ```
 
