@@ -30,7 +30,7 @@ class Team {
 }
 ```
 
-By setting up a simple .all class method I am able to create and store all of my team objects after one fetch request. I can change and re-render DOM elements using Team.all and not have send a second fetch request and create each object again, as long as I keep my Team.all array up-to-date. I also used a custom getter function to abstract away the querySelectors when I was manipulating the DOM
+By setting up a simple .all class variable I am able to create and store all of my team objects after one fetch request. I can change and re-render DOM elements using Team.all and not have send a second fetch request and create each object again, as long as I keep my Team.all array up-to-date. I also used a custom getter function to abstract away the querySelectors when I was manipulating the DOM
 
 ```
 class API {
