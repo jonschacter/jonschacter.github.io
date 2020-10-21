@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Cracking the Coding Interview Pt. 4"
-date:       2020-10-17 00:05:53 +0000
+title:      "Cracking the Coding Interview Pt. 3"
+date:       2020-10-16 20:05:54 -0400
 permalink:  cracking_the_coding_interview_pt_4
 ---
 
