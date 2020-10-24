@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Cracking the Coding Interview - String Rotation"
-date:       2020-10-24 20:02:19 +0000
+date:       2020-10-24 16:02:20 -0400
 permalink:  cracking_the_coding_interview_-_string_rotation
 ---
 
@@ -15,7 +15,7 @@ My first instinct is to iterate through s1 to find if any point of rotation woul
 > We are essentially asking if there's a way of splitting the first string into two parts, x and y, such that the first string is xy and the second string is yx. For example, x = wat and y = erbottle. The first string is xy = waterbottle. The second string is yx = erbottlewat
 > 
 
-Looking at this with variables, x and y, helped me think of a possible new solution. Given s1 = xy and s2 = yx, how can I use the isSubstring method to my advantage. If I combine s1 onto itself I get xyxy, which will include yx as a substring. Let's see if we can apply this.
+Looking at this with variables, x and y, helped me think of a possible new solution. Given s1 = xy and s2 = yx, how can I use the isSubstring method to my advantage? If I combine s1 onto itself I get xyxy, which will include yx as a substring. Let's see if we can apply this.
 
 ## Solution
 
