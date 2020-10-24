@@ -26,7 +26,7 @@ def string_rotation?(s1, s2)
 end
 ```
 
-This is a pretty clear and simple solution to the problem. I don't think I can make this code any more efficient or elegant, but I also must make sure this method has some data-proofing.
+This is a pretty clear and simple solution to the problem. I don't think I can make this code any more efficient or elegant, but I also must make sure this method has some data-proofing. The two issues I see are empty strings or strings that are not equal in length that could give me false positives. For example "spammy" and "pam" would currently give me a truthy result because "pam" is a substring of "spammyspammy".
 
 ```
 def self.string_rotation?(s1, s2)
